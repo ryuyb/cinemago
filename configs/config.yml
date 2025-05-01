@@ -1,0 +1,24 @@
+server:
+  addr: :8000
+
+log:
+  level: info
+  callerSkip: 3
+  enableConsole: true
+  file:
+    enable: false
+    jsonFormat: true
+    filePath: ./logs/app.log
+    maxSize: 100
+    maxBackups: 5
+    maxAge: 30
+    compress: true
+
+database:
+  driver: sqlite3
+  source: ":memory:?_fk=1&_pragma=foreign_keys(1)"
+  migrate: true
+
+jwt:
+  signingKey: 123
+  validWithinMinutes: 60
