@@ -13,7 +13,7 @@ type UserResp struct {
 type CreateUserReq struct {
 	Username        string `json:"username,omitempty" validate:"required"`
 	Password        string `json:"password,omitempty" validate:"required"`
-	ConfirmPassword string `json:"confirmPassword,omitempty" validate:"required,eqfield=Password"`
+	ConfirmPassword string `json:"confirm_password,omitempty" validate:"required,eqfield=Password"`
 	Email           string `json:"email,omitempty"`
 }
 
@@ -21,7 +21,7 @@ type UpdateUserReq struct {
 	Id              int    `json:"id,omitempty" validate:"required"`
 	Username        string `json:"username,omitempty" validate:"required"`
 	Password        string `json:"password,omitempty" validate:"required_with=ConfirmPassword"`
-	ConfirmPassword string `json:"confirmPassword,omitempty" validate:"required_with=Password,eqfield=Password"`
+	ConfirmPassword string `json:"confirm_password,omitempty" validate:"required_with=Password,eqfield=Password"`
 	Email           string `json:"email,omitempty"`
 }
 

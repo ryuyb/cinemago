@@ -14,8 +14,7 @@ func (CreateTime) Fields() []ent.Field {
 	return []ent.Field{
 		field.Time("create_time").
 			Default(time.Now).
-			Immutable().
-			StructTag(`json:"createTime,omitempty"`),
+			Immutable(),
 	}
 }
 
@@ -30,8 +29,7 @@ func (UpdateTime) Fields() []ent.Field {
 	return []ent.Field{
 		field.Time("update_time").
 			Default(time.Now).
-			UpdateDefault(time.Now).
-			StructTag(`json:"updateTime,omitempty"`),
+			UpdateDefault(time.Now),
 	}
 }
 

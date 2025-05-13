@@ -18,9 +18,9 @@ type User struct {
 	// ID of the ent.
 	ID int `json:"id,omitempty"`
 	// CreateTime holds the value of the "create_time" field.
-	CreateTime time.Time `json:"createTime,omitempty"`
+	CreateTime time.Time `json:"create_time,omitempty"`
 	// UpdateTime holds the value of the "update_time" field.
-	UpdateTime time.Time `json:"updateTime,omitempty"`
+	UpdateTime time.Time `json:"update_time,omitempty"`
 	// Username holds the value of the "username" field.
 	Username string `json:"username,omitempty"`
 	// Password holds the value of the "password" field.
